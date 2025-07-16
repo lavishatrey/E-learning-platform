@@ -127,7 +127,7 @@ export default function SinglePage() {
                     </Box>
 
                     <Box className="text-[12px] space-x-4" display="flex">
-                      <Box>🌗 Last updated 5/2023</Box>
+                      <Box>🌗 Last updated 5/2025</Box>
                       <Box>🌐 English</Box>
                       <Box display="flex">
                         ⌨️ English [Auto], Arabic [Auto]{" , "}
@@ -185,26 +185,39 @@ export default function SinglePage() {
                     border="1px solid"
                     m="15px"
                   >
-                    <Box onClick={handleClickPrevent} position="relative" _hover={{cursor:'not-allowed'}} w='20vw' p='1rem' display='flex' justifyContent='center' alignItems='center'>
-                      <Image w='100%'  src={video?.img || ''} alt={video?.title}/>
+                    <Box
+                      onClick={handleClickPrevent}
+                      position="relative"
+                      _hover={{ cursor: "not-allowed" }}
+                      w="20vw"
+                      p="1rem"
+                      display="flex"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Image
+                        w="100%"
+                        src={video?.img || ""}
+                        alt={video?.title}
+                      />
                       {
-                        <Box
-                          onClick={handleClickPrevent}
-                          position="absolute"
-                        >
+                        <Box onClick={handleClickPrevent} position="absolute">
                           <AiOutlineLock color="tomato" size="45px" />
                         </Box>
                       }
                     </Box>
                     <Stack>
                       <CardBody>
-                        <Heading size="md">{video?.title || 'Video Name'}</Heading>
+                        <Heading size="md">
+                          {video?.title || "Video Name"}
+                        </Heading>
                         <Text py="2">{video.description}</Text>
                         <Text size="12px">
                           <Text fontWeight="bold" display="inline" mr="5px">
                             Instructor:
                           </Text>
-                          {capitalizeFirstLetter(video?.teacher) || 'Teacher Name'}
+                          {capitalizeFirstLetter(video?.teacher) ||
+                            "Teacher Name"}
                         </Text>
                         <Text size="12px">
                           <Text fontWeight="bold" display="inline" mr="5px">

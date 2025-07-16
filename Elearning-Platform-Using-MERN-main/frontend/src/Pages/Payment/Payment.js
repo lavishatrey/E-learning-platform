@@ -161,7 +161,7 @@ export default function Payment({ isOpen, onOpen, onClose }) {
                   </Box>
                   <Box>
                     <Text fontSize="12px">
-                      SRM is required by law to collect applicable transaction
+                      LAVISH - LEARNS is required by law to collect applicable transaction
                       taxes for purchases made in certain tax jurisdications.
                     </Text>
                   </Box>

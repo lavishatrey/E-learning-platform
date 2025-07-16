@@ -29,8 +29,6 @@ const Navbar = () => {
     navigate("/");
   }
 
-
-
   return (
     <Box>
       <Flex
@@ -51,35 +49,35 @@ const Navbar = () => {
             <Text
               fontSize={30}
               fontWeight="extrabold"
-              color="#0056d2"
+              color="#333333"
               onClick={home}
               _hover={{ cursor: "pointer" }}
             >
-              SRM 
+              LAVISH - LEARNS
             </Text>
           </Box>
         </Flex>
 
         {!isMobile ? (
           <Flex>
-            <Box >
+            <Box>
               {/* Search Bar */}
               <Input
                 type="text"
                 variant="filled"
                 border="1px solid black"
-                fontSize='0.7rem'
-                m='0 2rem'
+                fontSize="0.7rem"
+                m="0 2rem"
                 color="black"
                 placeholder="What do you want to learn?"
                 borderRadius="10px 0 0px 10px"
-                _placeholder={{ color: "#555454",letterSpacing:'1px' }}
+                _placeholder={{ color: "#555454", letterSpacing: "1px" }}
               />
             </Box>
             <IconButton
               aria-label="Search"
               icon={<FaSearch />}
-              bg="#0056d2"
+              bg="#333333"
               color="white"
               borderRadius="0px 10px 10px 0px"
               _hover={{ background: "#0288D1" }}
@@ -91,7 +89,7 @@ const Navbar = () => {
               aria-label="Menu"
               icon={<FaBars />}
               bg="transparent"
-              color="#0056d2"
+              color="#333333"
               onClick={onOpen}
               fontSize="2xl"
               mr={2}
@@ -116,35 +114,29 @@ const Navbar = () => {
               <Link
                 _hover={{ color: "#003e9c", textDecoration: "underline" }}
                 href="#"
-              >
-                
-              </Link>
+              ></Link>
             </Box>
             <Box mr={4}>
               <Link
                 _hover={{ color: "#003e9c", textDecoration: "underline" }}
                 href="#"
-              >
-                
-              </Link>
+              ></Link>
             </Box>
             <Box mr={4}>
               <Link
                 _hover={{ color: "#003e9c", textDecoration: "underline" }}
                 href="#"
-              >
-                
-              </Link>
+              ></Link>
             </Box>
             <Box mr={4}>
-              <Link textDecoration="none" color="#0056d2" href="/login">
+              <Link textDecoration="none" color="#333333" href="/login">
                 Login
               </Link>
             </Box>
 
             {/* Join for Free Button */}
             <Button
-              bg="#0056d2"
+              bg="#333333"
               color="white"
               borderRadius="5px"
               _hover={{ bg: "#003e9c" }}
@@ -155,11 +147,7 @@ const Navbar = () => {
           </Flex>
         )}
       </Flex>
-      <NavBarDrawer
-        isOpen={isOpen}
-        onOpen={onOpen}
-        onClose={onClose}
-      />
+      <NavBarDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
     </Box>
   );
 };

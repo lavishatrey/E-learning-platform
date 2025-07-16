@@ -70,12 +70,12 @@ const Dropdown = () => {
         <Menu>
           <MenuButton
             as={Button}
-            bgColor={"#0056d2"}
+            bgColor={"#333333"}
             color={"white"}
             variant="outline"
             _hover={{
               bg: "white",
-              color: "#0056d2",
+              color: "#333333",
               border: "2px solid black",
               cursor: "pointer",
             }}
@@ -87,15 +87,22 @@ const Dropdown = () => {
               </Box>
             </Flex>
           </MenuButton>
-          <MenuList p={5} w='25vw' overflow={userStore?.role==='admin' ? 'scroll' : ''} h={userStore?.role==='admin' ? '90vh' : ''} pb='4'>
+          <MenuList
+            p={5}
+            w="25vw"
+            overflow={userStore?.role === "admin" ? "scroll" : ""}
+            h={userStore?.role === "admin" ? "90vh" : ""}
+            pb="4"
+          >
             {/* user options  */}
-            <Box >
+            <Box>
               <Flex justify="space-between" alignItems="center">
                 <Box p="1.5rem 0">
-                  {userStore?.role === "admin" || userStore?.role==='teacher' ? (
-                    <Flex alignItems={"center"} >
+                  {userStore?.role === "admin" ||
+                  userStore?.role === "teacher" ? (
+                    <Flex alignItems={"center"}>
                       <Box>
-                        <FaUserShield size="2rem" color="#0056d2" />
+                        <FaUserShield size="2rem" color="#333333" />
                         <Text fontSize="0.6rem" fontWeight="bold">
                           {capitalizeFirstLetter(userStore?.role)}
                         </Text>
@@ -106,7 +113,7 @@ const Dropdown = () => {
                     </Flex>
                   ) : userStore?.role === "user" ? (
                     <Flex alignItems={"center"}>
-                      <BiUserCircle size="2rem" color="#0056d2" />
+                      <BiUserCircle size="2rem" color="#333333" />
                       <Heading size="sm" ml="1rem">
                         {capitalizeFirstLetter(userStore?.name)}
                       </Heading>
@@ -149,7 +156,7 @@ const Dropdown = () => {
             {/* admin options */}
 
             {userStore?.role === "admin" && (
-              <Box >
+              <Box>
                 <Link to="/profile">
                   <MenuItem
                     p="0.7rem 0"
@@ -254,8 +261,8 @@ const Dropdown = () => {
 
             {/* Teacher options */}
 
-            {userStore?.role==='teacher' && (
-              <Box >
+            {userStore?.role === "teacher" && (
+              <Box>
                 <Link to="/profile">
                   <MenuItem
                     p="0.7rem 0"

@@ -106,24 +106,25 @@ export function NavBarDrawer({ isOpen, onClose }) {
                 textAlign="center"
                 fontSize={30}
                 fontWeight="extrabold"
-                color="#0056d2"
+                color="#333333"
                 _hover={{ cursor: "pointer" }}
               >
-                SRM
+                LAVISH - LEARNS
               </Text>
             </Link>
             <Box>
               <RxCross2 size="1.5rem" onClick={onClose} />
             </Box>
           </DrawerHeader>
-          <DrawerBody >
+          <DrawerBody>
             {userStore?.isAuth ? (
               <Flex justify="space-between" alignItems="center">
                 <Box p="1.5rem 0">
-                  {userStore?.role === "admin" || userStore?.role==='teacher' ? (
+                  {userStore?.role === "admin" ||
+                  userStore?.role === "teacher" ? (
                     <Flex alignItems={"center"}>
                       <Box>
-                        <FaUserShield size="2rem" color="#0056d2" />
+                        <FaUserShield size="2rem" color="#333333" />
                         <Text fontSize="0.6rem" fontWeight="bold">
                           {capitalizeFirstLetter(userStore?.role)}
                         </Text>
@@ -134,7 +135,7 @@ export function NavBarDrawer({ isOpen, onClose }) {
                     </Flex>
                   ) : userStore?.role === "user" ? (
                     <Flex alignItems={"center"}>
-                      <BiUserCircle size="2rem" color="#0056d2" />
+                      <BiUserCircle size="2rem" color="#333333" />
                       <Heading size="sm" ml="1rem">
                         {capitalizeFirstLetter(userStore?.name)}
                       </Heading>
@@ -160,7 +161,7 @@ export function NavBarDrawer({ isOpen, onClose }) {
               >
                 <Link to="/login">
                   <Button
-                    bg="#0056d2"
+                    bg="#333333"
                     color="white"
                     borderRadius="5px"
                     _hover={{ bg: "#003e9c" }}
@@ -170,7 +171,7 @@ export function NavBarDrawer({ isOpen, onClose }) {
                 </Link>
                 <Link to="/signup">
                   <Button
-                    bg="#0056d2"
+                    bg="#333333"
                     color="white"
                     borderRadius="5px"
                     _hover={{ bg: "#003e9c" }}
@@ -191,74 +192,56 @@ export function NavBarDrawer({ isOpen, onClose }) {
                     </Text>
                   </Link>
                   <Link to="/home">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       User Dashboard
                     </Text>
                   </Link>
                   <Link to="/admin/dashboard">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Admin Dashboard
                     </Text>
                   </Link>
                   <Link to="/admin/courses">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Courses
                     </Text>
                   </Link>
                   <Link to="/admin/users">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Users
                     </Text>
                   </Link>
                   <Link to="/admin/videos">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       AllVideos
                     </Text>
                   </Link>
                   <Link to="/admin/discount">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Discount
                     </Text>
                   </Link>
                   <Link to="/admin/giftcard">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       GiftCards
                     </Text>
                   </Link>
                   <Link to="/admin/statistic">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Statistics
                     </Text>
                   </Link>
                   <Link to="/admin/setting">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Settings
                     </Text>
                   </Link>
                 </Box>
               </Box>
-            ) }
+            )}
 
             {/*teacher options  */}
-            {userStore?.role==='teacher' && (
+            {userStore?.role === "teacher" && (
               <Box p="0.5rem 0" borderTop="1px solid #3A3F3F">
                 <Box>
                   <Link to="/profile">
@@ -267,45 +250,33 @@ export function NavBarDrawer({ isOpen, onClose }) {
                     </Text>
                   </Link>
                   <Link to="/home">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       User Dashboard
                     </Text>
                   </Link>
                   <Link to="/Teacherdashboard">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Teacher Dashboard
                     </Text>
                   </Link>
                   <Link to="/Teacher/courses">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Courses
                     </Text>
                   </Link>
                   <Link to="/Teacher/users">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Users
                     </Text>
                   </Link>
                   <Link to="/admin/videos">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       AllVideos
                     </Text>
                   </Link>
-                  
+
                   <Link to="/Teacher/setting">
-                    <Text
-                      fontSize="0.8rem" p="1rem 0"
-                    >
+                    <Text fontSize="0.8rem" p="1rem 0">
                       Settings
                     </Text>
                   </Link>

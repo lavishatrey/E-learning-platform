@@ -20,8 +20,7 @@ const Navbar = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem('user'))
-  
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -64,11 +63,11 @@ const Navbar = () => {
             <Text
               fontSize={30}
               fontWeight="extrabold"
-              color="#0056d2"
+              color="#333333"
               _hover={{ cursor: "pointer" }}
               onClick={home}
             >
-              SRM 
+              LAVISH - LEARNS
             </Text>
           </Box>
         </Flex>
@@ -92,7 +91,7 @@ const Navbar = () => {
             <IconButton
               aria-label="Search"
               icon={<FaSearch />}
-              bg="#0056d2"
+              bg="#333333"
               color="white"
               borderRightRadius="7px"
               borderRadius="0px 10px 10px 0px"
@@ -104,7 +103,7 @@ const Navbar = () => {
               aria-label="Menu"
               icon={<FaBars />}
               bg="transparent"
-              color="#0056d2"
+              color="#333333"
               fontSize="2xl"
               mr={2}
               onClick={onOpen}
@@ -112,52 +111,50 @@ const Navbar = () => {
           </Flex>
         )}
         {/* small screen search bar and icon  */}
-        {isMobile &&
-          location.pathname ===
-            "/home" &&(
-              <Box>
-                {showSearchBar ? (
-                  <Flex align="center">
-                    <Box>
-                      {/* Search Bar */}
-                      <Input
-                        type="text"
-                        variant="filled"
-                        border="1px solid black"
-                        fontSize="0.8rem"
-                        m="0 2rem"
-                        color="black"
-                        placeholder="Find your new Skiil!"
-                        borderRadius="10px 0 0px 10px"
-                        _placeholder={{
-                          color: "#555454",
-                          letterSpacing: "0.5px",
-                        }}
-                      />
-                    </Box>
-                    <IconButton
-                      aria-label="Search"
-                      icon={<FaSearch />}
-                      bg="#0056d2"
-                      onClick={handleShowSearchBar}
-                      color="white"
-                      borderRightRadius="7px"
-                      borderRadius="0px 10px 10px 0px"
-                    />
-                  </Flex>
-                ) : (
-                  <IconButton
-                    aria-label="Search"
-                    icon={<FaSearch />}
-                    color="white"
-                    borderRadius="7px"
-                    bg="#0056d2"
-                    onClick={handleShowSearchBar}
-                    _hover={{ backgroundColor: "#003e9c", color: "white" }}
+        {isMobile && location.pathname === "/home" && (
+          <Box>
+            {showSearchBar ? (
+              <Flex align="center">
+                <Box>
+                  {/* Search Bar */}
+                  <Input
+                    type="text"
+                    variant="filled"
+                    border="1px solid black"
+                    fontSize="0.8rem"
+                    m="0 2rem"
+                    color="black"
+                    placeholder="Find your new Skiil!"
+                    borderRadius="10px 0 0px 10px"
+                    _placeholder={{
+                      color: "#555454",
+                      letterSpacing: "0.5px",
+                    }}
                   />
-                )}
-              </Box>
+                </Box>
+                <IconButton
+                  aria-label="Search"
+                  icon={<FaSearch />}
+                  bg="#333333"
+                  onClick={handleShowSearchBar}
+                  color="white"
+                  borderRightRadius="7px"
+                  borderRadius="0px 10px 10px 0px"
+                />
+              </Flex>
+            ) : (
+              <IconButton
+                aria-label="Search"
+                icon={<FaSearch />}
+                color="white"
+                borderRadius="7px"
+                bg="#333333"
+                onClick={handleShowSearchBar}
+                _hover={{ backgroundColor: "#003e9c", color: "white" }}
+              />
             )}
+          </Box>
+        )}
 
         {!isMobile && (
           <Flex align="center">
@@ -166,7 +163,9 @@ const Navbar = () => {
                 _hover={{ color: "#003e9c", textDecoration: "underline" }}
                 href="/Teachme"
               >
-                {user.role!=='teacher' && user.role!=='admin' && 'Teach On SRM'}            
+                {user.role !== "teacher" &&
+                  user.role !== "admin" &&
+                  "Teach On LAVISH - LEARNS"}
               </Link>
             </Box>
             <Box>

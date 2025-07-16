@@ -4,24 +4,22 @@ import { Link } from "react-router-dom";
 
 const SingleAbsolute = ({ props }) => {
   const [page, setPage] = useState("left");
-  const [random,setRandom] = useState(0)
+  const [random, setRandom] = useState(0);
 
-  const { onOpen,price,img } = props;
+  const { onOpen, price, img } = props;
 
   function handlePayment() {
     onOpen();
   }
-  useEffect(()=>{
-   setRandom( (Math.random()*20).toFixed())
-  },[])
-
+  useEffect(() => {
+    setRandom((Math.random() * 20).toFixed());
+  }, []);
 
   return (
     <div className="xl:border text-white  xl:text-black xl:border-white xl:max-w-[280px] xl:shadow-md shadow-neutral-800  xl:bg-white">
       <div>
         <div>
           <Image src={img} />
-          
         </div>
         <div className="flex justify-around font-semibold text-sm h-[48px] items-center ">
           <div
@@ -49,7 +47,7 @@ const SingleAbsolute = ({ props }) => {
       <div className="px-[24px]">
         <div>
           <h3 className="font-serif font-bold max-w-[250px] py-1 ">
-            Subscribe to SRM's top courses
+            Subscribe to LAVISH - LEARNS's top courses
           </h3>
           <p className="text-[10px]">
             Get this course, plus 8,000+ of our top-rated courses with Personal
@@ -58,7 +56,10 @@ const SingleAbsolute = ({ props }) => {
               Learn more
             </a>
           </p>
-          <button className="bg-fuchsia-700  w-full py-[7px] font-semibold my-2" onClick={handlePayment}>
+          <button
+            className="bg-fuchsia-700  w-full py-[7px] font-semibold my-2"
+            onClick={handlePayment}
+          >
             Start subscription
           </button>
           <div className="w-full justify-center items-center flex flex-col space-y-[8px]">
@@ -74,7 +75,9 @@ const SingleAbsolute = ({ props }) => {
 
         <div className="flex space-x-2 place-items-baseline">
           <p className="font-bold text-sm">₹{price}</p>
-          <p className="line-through text-xs ">₹{((price*(+random+100))/100).toFixed()}</p>
+          <p className="line-through text-xs ">
+            ₹{((price * (+random + 100)) / 100).toFixed()}
+          </p>
           <p className="text-xs">{random} off</p>
         </div>
         <div className="flex text-red-600 items-baseline space-x-1 my-2">
@@ -83,7 +86,7 @@ const SingleAbsolute = ({ props }) => {
           <p className="text-xs">left at this price!</p>
         </div>
         <Box>
-            <Text>{}</Text>
+          <Text>{}</Text>
         </Box>
         <button
           onClick={handlePayment}
@@ -99,13 +102,13 @@ const SingleAbsolute = ({ props }) => {
 
         <div className="underline flex text-[11px] font-bold justify-around underline-offset-2 pb-7">
           <div>
-            <Link to=''>share</Link>
+            <Link to="">share</Link>
           </div>
           <div>
-            <Link to=''>Gift this course</Link>
+            <Link to="">Gift this course</Link>
           </div>
           <div>
-            <Link to=''>ApplyCoupan</Link>
+            <Link to="">ApplyCoupan</Link>
           </div>
         </div>
       </div>

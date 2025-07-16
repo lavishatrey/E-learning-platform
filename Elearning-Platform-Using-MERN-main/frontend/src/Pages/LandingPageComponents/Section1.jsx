@@ -36,7 +36,14 @@ const Section1 = () => {
           }}
           fontWeight="semibold"
         >
-          <Text fontSize='2rem' color="#0056d2" display='inline'>SRM</Text> Where Educators and Students Connect Seamlessly Online. Teachers craft personalized courses for various subjects and grades, while students explore and purchase courses tailored to their needs. Empowering both educators and learners, SRM revolutionizes online education.
+          <Text fontSize="2rem" color="#333333" display="inline">
+            LAVISH - LEARNS
+          </Text>{" "}
+          Where Educators and Students Connect Seamlessly Online. Teachers craft
+          personalized courses for various subjects and grades, while students
+          explore and purchase courses tailored to their needs. Empowering both
+          educators and learners, LAVISH - LEARNS revolutionizes online
+          education.
         </Text>
         <Flex
           gap={30}
@@ -48,7 +55,7 @@ const Section1 = () => {
           }}
         >
           <Button
-            bg="#0056d2"
+            bg="#333333"
             color="white"
             size="lg"
             p={{
@@ -56,15 +63,15 @@ const Section1 = () => {
               md: "25px 50px",
               sm: "20px 40px",
             }}
-            border="3px solid #0056d2"
+            border="3px solid #333333"
             _hover={{ background: "#42A5F5", color: "#0D47A1" }}
             onClick={() => navigate("/signup")}
           >
             Join for Free
           </Button>
           <Button
-            colorScheme="#0056d2"
-            color="#0056d2"
+            colorScheme="#333333"
+            color="#333333"
             variant="outline"
             size="lg"
             p={{
@@ -72,15 +79,15 @@ const Section1 = () => {
               md: "25px 50px",
               sm: "20px 40px",
             }}
-            border="3px solid #0056d2"
+            border="3px solid #333333"
             onClick={() => navigate("/login")}
           >
-            Try SRM for Business
+            Try LAVISH - LEARNS for Business
           </Button>
         </Flex>
       </Flex>
       <Box
-        display={{base:'none', sm: "none", md: "flex" }}
+        display={{ base: "none", sm: "none", md: "flex" }}
         justifyContent="center"
         alignItems="center"
       >

@@ -43,7 +43,6 @@ const Section6 = () => {
         justifyContent={{
           lg: "space-evenly",
         }}
-       
       >
         <Text
           fontSize={{
@@ -52,7 +51,8 @@ const Section6 = () => {
             lg: "45 px",
           }}
         >
-          Learner outcomes on <b style={{ color: "#0056d2" }}>SRM</b>
+          Learner outcomes on{" "}
+          <b style={{ color: "#333333" }}>LAVISH - LEARNS</b>
         </Text>
         <Text
           fontFamily={"poppins"}
@@ -62,14 +62,23 @@ const Section6 = () => {
             lg: "16px",
           }}
         >
-          According to the latest findings from SRM's 2023 report,{" "}
+          According to the latest findings from LAVISH - LEARNS's 2025 report,{" "}
           <span>
-            <b>an impressive 87% of learners have reported tangible career benefits.</b>
-          </span> These include promotions, enhanced job performance, successful job transitions, increased employability, and skill development. SRM's extensive curriculum and industry-recognized certifications have played a pivotal role in facilitating the professional growth of learners, equipping them to thrive in today's fiercely competitive job landscape."
+            <b>
+              an impressive 87% of learners have reported tangible career
+              benefits.
+            </b>
+          </span>{" "}
+          These include promotions, enhanced job performance, successful job
+          transitions, increased employability, and skill development. LAVISH -
+          LEARNS's extensive curriculum and industry-recognized certifications
+          have played a pivotal role in facilitating the professional growth of
+          learners, equipping them to thrive in today's fiercely competitive job
+          landscape."
         </Text>
-        <Flex mt='15px' >
+        <Flex mt="15px">
           <Button
-            bgColor={"#0056d2"}
+            bgColor={"#333333"}
             _hover={{ backgroundColor: "#03357b" }}
             color={"white"}
             p={{

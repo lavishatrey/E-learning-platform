@@ -330,7 +330,7 @@ const Footer = () => {
           >
             <Image
               width={{
-                base:"35%",
+                base: "35%",
                 sm: "20%",
                 md: "35%",
                 lg: "45%",
@@ -340,9 +340,8 @@ const Footer = () => {
             />
 
             <Image
-
               width={{
-                base:"35%",
+                base: "35%",
                 sm: "20%",
                 md: "35%",
                 lg: "45%",
@@ -352,7 +351,7 @@ const Footer = () => {
             />
             <Image
               width={{
-                base:"15%",
+                base: "15%",
                 sm: "15%",
                 md: "25%",
                 lg: "35%",
@@ -385,10 +384,10 @@ const Footer = () => {
         <Box>
           {" "}
           <Text fontSize="13.5px">
-            © 2023 SRM Inc. All rights reserved.
+            © 2025 LAVISH - LEARNS Inc. All rights reserved.
           </Text>
         </Box>
-        <Flex spacing={4} overflow='hidden'>
+        <Flex spacing={4} overflow="hidden">
           <Image
             src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
             alt=""
@@ -411,19 +410,19 @@ const Footer = () => {
             mr={4}
           />
           <Image
-          display={{
-            base:"none",
-            sm:"block"
-          }}
+            display={{
+              base: "none",
+              sm: "block",
+            }}
             src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
             alt=""
             mr={4}
           />
           <Image
-          display={{
-            base:"none",
-            sm:"block"
-          }}
+            display={{
+              base: "none",
+              sm: "block",
+            }}
             src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/images/9b7e964107839c77644d7e7d15035b73.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"
             alt=""
             mr={4}
