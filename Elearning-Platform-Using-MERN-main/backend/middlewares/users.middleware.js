@@ -9,7 +9,7 @@ const auth = (req, res, next) => {
       if (blacklist.includes(token)) {
         res.json({ msg: "Please Login Again" });
       }
-      const decoded = jwt.verify(token, "SRM");
+      const decoded = jwt.verify(token, "LAVISH - LEARNS");
       if (decoded) {
         req.body.username = decoded.user;
         req.body.userId = decoded.userId;

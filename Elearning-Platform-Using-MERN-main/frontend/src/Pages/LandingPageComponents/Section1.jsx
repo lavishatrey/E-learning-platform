@@ -25,7 +25,7 @@ const Section1 = () => {
           fontWeight="bold"
           fontFamily="poppins"
         >
-          Learn without limits
+          Grow. Learn. Succeed.
         </Text>
         <Text
           fontSize={{
@@ -39,11 +39,7 @@ const Section1 = () => {
           <Text fontSize="2rem" color="#333333" display="inline">
             LAVISH - LEARNS
           </Text>{" "}
-          Where Educators and Students Connect Seamlessly Online. Teachers craft
-          personalized courses for various subjects and grades, while students
-          explore and purchase courses tailored to their needs. Empowering both
-          educators and learners, LAVISH - LEARNS revolutionizes online
-          education.
+         A dynamic online hub where educators and students unite effortlessly. Teachers are equipped with intuitive tools to design and deliver personalized courses spanning a vast array of subjects and academic stages. For students, it's a world of tailored learning, allowing them to explore and acquire courses that perfectly align with their goals and interests. LAVISH - LEARNS empowers both the imparting and the acquiring of knowledge, creating a truly transformative educational experience that redefines what's possible in online learning.
         </Text>
         <Flex
           gap={30}
